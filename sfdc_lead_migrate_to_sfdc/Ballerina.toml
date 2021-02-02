@@ -1,0 +1,7 @@
+[package]
+org = "chuhaashanan"
+name = "sfdc_lead_migrate_to_sfdc"
+version = "0.1.0"
+
+[build-options]
+observabilityIncluded = true

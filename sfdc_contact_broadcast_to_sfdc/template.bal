@@ -29,7 +29,6 @@ service on sfdcEventListener1 {
     remote function onEvent(json cont) returns @tainted error? {
         io:StringReader sr = new (cont.toJsonString());
         json contact = check sr.readJson();
-        io:println(contact.sobject);
         string salutation = contact.sobject.Salutation.toString();
         string lastName = contact.sobject.LastName.toString();
         string firstName = contact.sobject.FirstName.toString();
@@ -40,7 +39,6 @@ service on sfdcEventListener1 {
         string accountId = contact.sobject.AccountId.toString();
         string title = contact.sobject.Title.toString();
         string department = contact.sobject.Department.toString();
-        io:println(email);
         json contactRecord = {
             Salutation: salutation,
             LastName: lastName,
