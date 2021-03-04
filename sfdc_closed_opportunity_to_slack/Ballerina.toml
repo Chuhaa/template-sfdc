@@ -1,0 +1,7 @@
+[package]
+org = "chuhaashanan"
+name = "sfdc_closed_opportunity_to_slack"
+version = "0.1.0"
+
+[build-options]
+observabilityIncluded = true
